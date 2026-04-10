@@ -1,0 +1,40 @@
+# ── Yelp dataset (large files — download separately) ──────────
+Yelp-JSON/
+__MACOSX/
+
+# ── Archives ──────────────────────────────────────────────────
+*.tar
+*.zip
+*.gz
+*.tgz
+
+# ── Python ────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# ── MongoDB data directories ──────────────────────────────────
+data/db/
+data/
+mongod.lock
+*.wt
+*.turtle
+WiredTiger*
+diagnostic.data/
+journal/
+_mdb_catalog*
+
+# ── IDE / OS ──────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+*.iml
+.vscode/
