@@ -1,0 +1,638 @@
+neighborhood,year,total,tier_1,tier_2,tier_3,tier_4,upscale_ratio
+South Perry,2006,4,1,3,0,0,0.75
+South Perry,2007,10,1,9,0,0,0.9
+South Perry,2008,12,3,8,1,0,0.75
+South Perry,2009,8,2,6,0,0,0.75
+South Perry,2010,29,17,12,0,0,0.4138
+South Perry,2011,24,7,16,1,0,0.7083
+South Perry,2012,22,9,13,0,0,0.5909
+South Perry,2013,12,6,5,1,0,0.5
+South Perry,2014,15,6,9,0,0,0.6
+South Perry,2015,19,9,9,1,0,0.5263
+South Perry,2016,14,5,8,1,0,0.6429
+South Perry,2017,10,2,7,1,0,0.8
+South Perry,2018,12,9,2,1,0,0.25
+South Perry,2019,1,0,1,0,0,1.0
+South Perry,2020,1,0,1,0,0,1.0
+South Perry,2021,2,0,2,0,0,1.0
+Keystone at the Crossing,2006,12,2,8,2,0,0.8333
+Keystone at the Crossing,2007,9,0,4,4,1,1.0
+Keystone at the Crossing,2008,31,3,12,13,3,0.9032
+Keystone at the Crossing,2009,12,4,5,2,1,0.6667
+Keystone at the Crossing,2010,19,3,7,7,2,0.8421
+Keystone at the Crossing,2011,11,3,6,2,0,0.7273
+Keystone at the Crossing,2012,14,3,6,5,0,0.7857
+Keystone at the Crossing,2013,12,1,7,3,1,0.9167
+Keystone at the Crossing,2014,16,1,11,4,0,0.9375
+Keystone at the Crossing,2015,11,2,8,1,0,0.8182
+Keystone at the Crossing,2016,8,3,5,0,0,0.625
+Keystone at the Crossing,2017,9,4,5,0,0,0.5556
+Keystone at the Crossing,2018,10,1,8,1,0,0.9
+Keystone at the Crossing,2019,1,0,1,0,0,1.0
+Keystone at the Crossing,2020,1,0,1,0,0,1.0
+Keystone at the Crossing,2021,2,0,2,0,0,1.0
+Castleton,2005,1,0,1,0,0,1.0
+Castleton,2006,6,1,4,1,0,0.8333
+Castleton,2007,7,1,5,1,0,0.8571
+Castleton,2008,48,6,34,7,1,0.875
+Castleton,2009,17,5,11,1,0,0.7059
+Castleton,2010,31,9,17,4,1,0.7097
+Castleton,2011,43,6,28,7,2,0.8605
+Castleton,2012,36,10,24,2,0,0.7222
+Castleton,2013,29,6,15,8,0,0.7931
+Castleton,2014,25,11,13,1,0,0.56
+Castleton,2015,24,3,16,4,1,0.875
+Castleton,2016,20,7,9,3,1,0.65
+Castleton,2017,15,4,11,0,0,0.7333
+Castleton,2018,6,0,6,0,0,1.0
+Castleton,2019,8,0,8,0,0,1.0
+Castleton,2020,1,0,1,0,0,1.0
+Castleton,2021,3,0,3,0,0,1.0
+Speedway,2006,1,0,1,0,0,1.0
+Speedway,2007,2,1,1,0,0,0.5
+Speedway,2008,3,1,2,0,0,0.6667
+Speedway,2009,1,0,1,0,0,1.0
+Speedway,2010,5,3,1,1,0,0.4
+Speedway,2011,7,2,5,0,0,0.7143
+Speedway,2012,5,2,3,0,0,0.6
+Speedway,2013,6,4,2,0,0,0.3333
+Speedway,2014,2,1,1,0,0,0.5
+Speedway,2015,4,2,2,0,0,0.5
+Speedway,2016,6,5,1,0,0,0.1667
+Speedway,2017,4,0,3,1,0,1.0
+Speedway,2019,1,0,1,0,0,1.0
+Broad Ripple,2006,11,3,8,0,0,0.7273
+Broad Ripple,2007,24,4,16,4,0,0.8333
+Broad Ripple,2008,64,17,38,9,0,0.7344
+Broad Ripple,2009,10,4,6,0,0,0.6
+Broad Ripple,2010,32,12,17,3,0,0.625
+Broad Ripple,2011,15,7,8,0,0,0.5333
+Broad Ripple,2012,17,6,10,1,0,0.6471
+Broad Ripple,2013,19,4,12,3,0,0.7895
+Broad Ripple,2014,17,3,12,1,1,0.8235
+Broad Ripple,2015,12,1,11,0,0,0.9167
+Broad Ripple,2016,13,4,9,0,0,0.6923
+Broad Ripple,2017,10,3,7,0,0,0.7
+Broad Ripple,2018,12,3,9,0,0,0.75
+Broad Ripple,2019,1,0,1,0,0,1.0
+Broad Ripple,2020,4,1,3,0,0,0.75
+Broad Ripple,2021,1,0,1,0,0,1.0
+St Vincent / Greenbriar,2006,2,0,2,0,0,1.0
+St Vincent / Greenbriar,2007,3,1,2,0,0,0.6667
+St Vincent / Greenbriar,2008,15,5,9,1,0,0.6667
+St Vincent / Greenbriar,2009,9,5,4,0,0,0.4444
+St Vincent / Greenbriar,2010,9,2,7,0,0,0.7778
+St Vincent / Greenbriar,2011,5,2,3,0,0,0.6
+St Vincent / Greenbriar,2012,9,6,2,1,0,0.3333
+St Vincent / Greenbriar,2013,11,7,4,0,0,0.3636
+St Vincent / Greenbriar,2014,3,1,2,0,0,0.6667
+St Vincent / Greenbriar,2015,6,3,3,0,0,0.5
+St Vincent / Greenbriar,2016,2,0,1,1,0,1.0
+St Vincent / Greenbriar,2017,3,0,3,0,0,1.0
+St Vincent / Greenbriar,2019,1,1,0,0,0,0.0
+Allisonville,2006,3,0,3,0,0,1.0
+Allisonville,2007,4,1,3,0,0,0.75
+Allisonville,2008,19,9,8,2,0,0.5263
+Allisonville,2009,6,2,4,0,0,0.6667
+Allisonville,2010,10,4,5,1,0,0.6
+Allisonville,2011,10,2,7,1,0,0.8
+Allisonville,2012,12,7,4,1,0,0.4167
+Allisonville,2013,17,6,6,4,1,0.6471
+Allisonville,2014,7,3,3,1,0,0.5714
+Allisonville,2015,9,2,5,2,0,0.7778
+Allisonville,2016,8,1,7,0,0,0.875
+Allisonville,2017,3,2,1,0,0,0.3333
+Allisonville,2018,1,0,1,0,0,1.0
+Allisonville,2019,4,1,3,0,0,0.75
+Allisonville,2021,1,0,1,0,0,1.0
+Irvington,2006,1,1,0,0,0,0.0
+Irvington,2007,3,1,2,0,0,0.6667
+Irvington,2008,4,2,2,0,0,0.5
+Irvington,2009,3,0,3,0,0,1.0
+Irvington,2010,9,5,4,0,0,0.4444
+Irvington,2011,11,7,3,1,0,0.3636
+Irvington,2012,2,0,2,0,0,1.0
+Irvington,2013,2,2,0,0,0,0.0
+Irvington,2014,7,3,3,1,0,0.5714
+Irvington,2015,4,3,1,0,0,0.25
+Irvington,2016,8,2,6,0,0,0.75
+Irvington,2017,4,2,2,0,0,0.5
+Irvington,2018,1,1,0,0,0,0.0
+Irvington,2019,1,0,1,0,0,1.0
+Irvington,2020,1,0,1,0,0,1.0
+Irvington,2021,1,0,1,0,0,1.0
+Chapel Hill / Ben Davis,2008,5,2,3,0,0,0.6
+Chapel Hill / Ben Davis,2009,7,4,3,0,0,0.4286
+Chapel Hill / Ben Davis,2010,8,4,3,1,0,0.5
+Chapel Hill / Ben Davis,2011,9,2,7,0,0,0.7778
+Chapel Hill / Ben Davis,2012,13,6,6,0,1,0.5385
+Chapel Hill / Ben Davis,2013,17,13,4,0,0,0.2353
+Chapel Hill / Ben Davis,2014,7,2,5,0,0,0.7143
+Chapel Hill / Ben Davis,2015,5,4,1,0,0,0.2
+Chapel Hill / Ben Davis,2016,7,3,3,1,0,0.5714
+Chapel Hill / Ben Davis,2017,2,1,1,0,0,0.5
+Chapel Hill / Ben Davis,2018,3,2,1,0,0,0.3333
+Downtown,2005,2,0,0,2,0,1.0
+Downtown,2006,30,6,20,3,1,0.8
+Downtown,2007,83,12,51,19,1,0.8554
+Downtown,2008,77,25,44,7,1,0.6753
+Downtown,2009,43,17,22,3,1,0.6047
+Downtown,2010,61,18,40,3,0,0.7049
+Downtown,2011,64,22,29,13,0,0.6562
+Downtown,2012,60,20,33,7,0,0.6667
+Downtown,2013,63,23,37,3,0,0.6349
+Downtown,2014,59,21,34,3,1,0.6441
+Downtown,2015,56,17,37,2,0,0.6964
+Downtown,2016,48,12,30,5,1,0.75
+Downtown,2017,40,7,28,5,0,0.825
+Downtown,2018,26,5,19,2,0,0.8077
+Downtown,2019,18,1,17,0,0,0.9444
+Downtown,2020,9,1,8,0,0,0.8889
+Downtown,2021,17,1,15,1,0,0.9412
+Clearwater,2006,1,0,1,0,0,1.0
+Clearwater,2007,2,0,2,0,0,1.0
+Clearwater,2008,4,1,1,1,1,0.75
+Clearwater,2009,3,1,2,0,0,0.6667
+Clearwater,2010,2,0,2,0,0,1.0
+Clearwater,2011,6,3,3,0,0,0.5
+Clearwater,2012,1,0,1,0,0,1.0
+Clearwater,2013,3,1,1,1,0,0.6667
+Clearwater,2014,2,0,2,0,0,1.0
+Clearwater,2015,3,2,1,0,0,0.3333
+Clearwater,2017,1,0,1,0,0,1.0
+Fountain Square,2006,2,0,2,0,0,1.0
+Fountain Square,2007,5,2,3,0,0,0.6
+Fountain Square,2008,10,4,6,0,0,0.6
+Fountain Square,2009,5,1,4,0,0,0.8
+Fountain Square,2010,8,1,7,0,0,0.875
+Fountain Square,2011,11,3,7,1,0,0.7273
+Fountain Square,2012,11,6,5,0,0,0.4545
+Fountain Square,2013,6,2,3,1,0,0.6667
+Fountain Square,2014,4,1,3,0,0,0.75
+Fountain Square,2015,5,0,5,0,0,1.0
+Fountain Square,2016,9,3,5,0,1,0.6667
+Fountain Square,2017,7,3,4,0,0,0.5714
+Fountain Square,2018,3,0,2,1,0,1.0
+Fountain Square,2019,7,1,6,0,0,0.8571
+Fountain Square,2021,2,0,2,0,0,1.0
+Eastside,2006,1,0,1,0,0,1.0
+Eastside,2009,2,1,1,0,0,0.5
+Eastside,2010,2,1,1,0,0,0.5
+Eastside,2011,4,2,2,0,0,0.5
+Eastside,2012,2,0,2,0,0,1.0
+Eastside,2013,1,1,0,0,0,0.0
+Eastside,2014,2,2,0,0,0,0.0
+Eastside,2015,4,4,0,0,0,0.0
+Eastside,2016,2,0,2,0,0,1.0
+Eastside,2017,2,2,0,0,0,0.0
+Eastside,2018,1,0,0,1,0,1.0
+Near Eastside,2006,2,1,1,0,0,0.5
+Near Eastside,2007,2,0,2,0,0,1.0
+Near Eastside,2008,4,3,1,0,0,0.25
+Near Eastside,2009,3,2,1,0,0,0.3333
+Near Eastside,2010,8,6,2,0,0,0.25
+Near Eastside,2011,11,6,5,0,0,0.4545
+Near Eastside,2012,5,4,1,0,0,0.2
+Near Eastside,2013,8,5,3,0,0,0.375
+Near Eastside,2014,11,6,5,0,0,0.4545
+Near Eastside,2015,9,8,1,0,0,0.1111
+Near Eastside,2016,6,4,1,1,0,0.3333
+Near Eastside,2017,3,1,2,0,0,0.6667
+Near Eastside,2018,3,0,2,1,0,1.0
+Near Eastside,2019,3,0,3,0,0,1.0
+Near Eastside,2020,1,0,1,0,0,1.0
+Near Eastside,2021,2,0,2,0,0,1.0
+Millersville,2008,4,2,2,0,0,0.5
+Millersville,2009,2,2,0,0,0,0.0
+Millersville,2010,5,2,3,0,0,0.6
+Millersville,2011,8,3,5,0,0,0.625
+Millersville,2012,4,2,1,1,0,0.5
+Millersville,2013,2,1,1,0,0,0.5
+Millersville,2014,5,3,2,0,0,0.4
+Millersville,2015,6,2,4,0,0,0.6667
+Millersville,2016,4,3,1,0,0,0.25
+Millersville,2017,2,0,2,0,0,1.0
+Millersville,2018,1,1,0,0,0,0.0
+North Perry,2007,1,1,0,0,0,0.0
+North Perry,2008,3,1,2,0,0,0.6667
+North Perry,2009,3,3,0,0,0,0.0
+North Perry,2010,8,5,3,0,0,0.375
+North Perry,2011,6,4,2,0,0,0.3333
+North Perry,2012,6,6,0,0,0,0.0
+North Perry,2013,7,3,4,0,0,0.5714
+North Perry,2014,11,7,4,0,0,0.3636
+North Perry,2015,4,3,1,0,0,0.25
+North Perry,2017,2,1,1,0,0,0.5
+North Perry,2018,3,1,2,0,0,0.6667
+North Perry,2019,3,3,0,0,0,0.0
+Glendale,2008,5,0,5,0,0,1.0
+Glendale,2009,3,0,3,0,0,1.0
+Glendale,2010,5,1,2,2,0,0.8
+Glendale,2011,8,2,6,0,0,0.75
+Glendale,2012,6,2,4,0,0,0.6667
+Glendale,2013,10,4,4,2,0,0.6
+Glendale,2014,4,1,2,1,0,0.75
+Glendale,2015,3,2,1,0,0,0.3333
+Glendale,2016,2,1,1,0,0,0.5
+Glendale,2017,1,0,1,0,0,1.0
+Glendale,2019,2,1,1,0,0,0.5
+International Marketplace,2007,5,2,3,0,0,0.6
+International Marketplace,2008,8,1,6,0,1,0.875
+International Marketplace,2009,4,2,2,0,0,0.5
+International Marketplace,2010,7,3,4,0,0,0.5714
+International Marketplace,2011,12,4,6,1,1,0.6667
+International Marketplace,2012,5,3,2,0,0,0.4
+International Marketplace,2013,10,6,4,0,0,0.4
+International Marketplace,2014,1,1,0,0,0,0.0
+International Marketplace,2015,5,3,2,0,0,0.4
+International Marketplace,2016,2,1,1,0,0,0.5
+International Marketplace,2017,6,4,2,0,0,0.3333
+International Marketplace,2018,3,3,0,0,0,0.0
+International Marketplace,2019,1,0,1,0,0,1.0
+Snacks / Guion Creek,2007,1,1,0,0,0,0.0
+Snacks / Guion Creek,2008,3,1,2,0,0,0.6667
+Snacks / Guion Creek,2009,2,1,1,0,0,0.5
+Snacks / Guion Creek,2010,8,4,3,1,0,0.5
+Snacks / Guion Creek,2011,6,3,3,0,0,0.5
+Snacks / Guion Creek,2012,3,2,1,0,0,0.3333
+Snacks / Guion Creek,2013,6,3,2,1,0,0.5
+Snacks / Guion Creek,2014,5,3,1,0,1,0.4
+Snacks / Guion Creek,2015,5,2,3,0,0,0.6
+Snacks / Guion Creek,2016,4,2,2,0,0,0.5
+Snacks / Guion Creek,2017,3,3,0,0,0,0.0
+Snacks / Guion Creek,2019,2,1,1,0,0,0.5
+Canterbury-Chatard,2006,1,0,1,0,0,1.0
+Canterbury-Chatard,2007,1,1,0,0,0,0.0
+Canterbury-Chatard,2008,11,3,6,1,1,0.7273
+Canterbury-Chatard,2009,3,1,2,0,0,0.6667
+Canterbury-Chatard,2010,1,1,0,0,0,0.0
+Canterbury-Chatard,2011,2,1,1,0,0,0.5
+Canterbury-Chatard,2012,6,3,2,1,0,0.5
+Canterbury-Chatard,2013,4,0,3,1,0,1.0
+Canterbury-Chatard,2014,2,0,1,1,0,1.0
+Canterbury-Chatard,2015,6,2,4,0,0,0.6667
+Canterbury-Chatard,2016,7,2,5,0,0,0.7143
+Canterbury-Chatard,2017,2,0,2,0,0,1.0
+Canterbury-Chatard,2019,1,1,0,0,0,0.0
+Canterbury-Chatard,2021,1,0,1,0,0,1.0
+Near Northside,2007,4,1,3,0,0,0.75
+Near Northside,2008,8,2,6,0,0,0.75
+Near Northside,2009,5,2,2,1,0,0.6
+Near Northside,2010,2,1,1,0,0,0.5
+Near Northside,2011,10,6,4,0,0,0.4
+Near Northside,2012,5,2,2,0,1,0.6
+Near Northside,2013,11,8,3,0,0,0.2727
+Near Northside,2014,2,2,0,0,0,0.0
+Near Northside,2015,5,1,4,0,0,0.8
+Near Northside,2016,6,1,5,0,0,0.8333
+Near Northside,2017,3,1,2,0,0,0.6667
+Near Northside,2018,1,0,1,0,0,1.0
+Near Northside,2019,1,0,1,0,0,1.0
+Near Northside,2020,1,0,1,0,0,1.0
+Near Northside,2021,1,0,0,1,0,1.0
+Lawrence,2008,5,2,3,0,0,0.6
+Lawrence,2009,8,3,5,0,0,0.625
+Lawrence,2010,7,4,2,0,1,0.4286
+Lawrence,2011,11,7,4,0,0,0.3636
+Lawrence,2012,6,4,2,0,0,0.3333
+Lawrence,2013,14,10,4,0,0,0.2857
+Lawrence,2014,2,2,0,0,0,0.0
+Lawrence,2015,9,5,3,0,1,0.4444
+Lawrence,2016,4,3,1,0,0,0.25
+Lawrence,2017,4,3,1,0,0,0.25
+Lawrence,2018,1,0,1,0,0,1.0
+Lawrence,2019,1,1,0,0,0,0.0
+Augusta / New Augusta,2007,1,1,0,0,0,0.0
+Augusta / New Augusta,2008,4,1,3,0,0,0.75
+Augusta / New Augusta,2009,2,1,1,0,0,0.5
+Augusta / New Augusta,2010,9,6,3,0,0,0.3333
+Augusta / New Augusta,2011,15,13,2,0,0,0.1333
+Augusta / New Augusta,2012,14,7,7,0,0,0.5
+Augusta / New Augusta,2013,11,8,3,0,0,0.2727
+Augusta / New Augusta,2014,5,1,4,0,0,0.8
+Augusta / New Augusta,2015,7,4,3,0,0,0.4286
+Augusta / New Augusta,2016,5,4,1,0,0,0.2
+Augusta / New Augusta,2017,3,2,1,0,0,0.3333
+Augusta / New Augusta,2018,4,3,1,0,0,0.25
+Augusta / New Augusta,2019,1,0,1,0,0,1.0
+Augusta / New Augusta,2021,1,0,1,0,0,1.0
+Northwest High School,2006,1,1,0,0,0,0.0
+Northwest High School,2010,3,0,3,0,0,1.0
+Northwest High School,2011,5,3,2,0,0,0.4
+Northwest High School,2012,3,2,1,0,0,0.3333
+Northwest High School,2014,4,3,1,0,0,0.25
+Northwest High School,2015,2,1,1,0,0,0.5
+Northwest High School,2016,4,4,0,0,0,0.0
+Northwest High School,2017,1,0,1,0,0,1.0
+Northwest High School,2018,1,1,0,0,0,0.0
+East Warren,2008,2,1,1,0,0,0.5
+East Warren,2009,5,2,3,0,0,0.6
+East Warren,2010,7,2,5,0,0,0.7143
+East Warren,2011,9,5,4,0,0,0.4444
+East Warren,2012,9,5,3,1,0,0.4444
+East Warren,2013,6,2,2,1,1,0.6667
+East Warren,2014,5,1,3,1,0,0.8
+East Warren,2015,11,8,3,0,0,0.2727
+East Warren,2016,5,2,2,1,0,0.6
+East Warren,2017,1,1,0,0,0,0.0
+East Warren,2018,2,1,1,0,0,0.5
+I-65 / South Emerson,2006,5,1,4,0,0,0.8
+I-65 / South Emerson,2007,2,0,0,0,2,1.0
+I-65 / South Emerson,2008,9,4,5,0,0,0.5556
+I-65 / South Emerson,2009,3,2,1,0,0,0.3333
+I-65 / South Emerson,2010,5,3,2,0,0,0.4
+I-65 / South Emerson,2011,9,3,6,0,0,0.6667
+I-65 / South Emerson,2012,8,4,3,1,0,0.5
+I-65 / South Emerson,2013,12,9,2,1,0,0.25
+I-65 / South Emerson,2014,6,1,4,1,0,0.8333
+I-65 / South Emerson,2015,4,4,0,0,0,0.0
+I-65 / South Emerson,2016,4,1,1,2,0,0.75
+I-65 / South Emerson,2017,4,1,3,0,0,0.75
+I-65 / South Emerson,2018,1,0,1,0,0,1.0
+I-65 / South Emerson,2019,2,1,1,0,0,0.5
+Airport,2008,1,0,1,0,0,1.0
+Airport,2009,3,1,2,0,0,0.6667
+Airport,2010,7,1,6,0,0,0.8571
+Airport,2011,8,2,6,0,0,0.75
+Airport,2012,3,1,1,1,0,0.6667
+Airport,2013,8,3,4,1,0,0.625
+Airport,2014,3,2,1,0,0,0.3333
+Airport,2015,5,4,1,0,0,0.2
+Airport,2016,3,1,2,0,0,0.6667
+Airport,2020,1,0,1,0,0,1.0
+College Park,2006,2,0,2,0,0,1.0
+College Park,2007,6,3,3,0,0,0.5
+College Park,2008,20,7,12,1,0,0.65
+College Park,2009,13,8,4,0,1,0.3846
+College Park,2010,5,4,1,0,0,0.2
+College Park,2011,12,6,6,0,0,0.5
+College Park,2012,8,4,4,0,0,0.5
+College Park,2013,9,1,6,2,0,0.8889
+College Park,2014,7,3,3,1,0,0.5714
+College Park,2015,6,3,3,0,0,0.5
+College Park,2016,3,1,2,0,0,0.6667
+College Park,2017,6,0,5,1,0,1.0
+College Park,2018,6,3,3,0,0,0.5
+College Park,2019,3,0,3,0,0,1.0
+College Park,2021,2,1,1,0,0,0.5
+Raymond Park,2009,2,1,1,0,0,0.5
+Raymond Park,2010,5,3,2,0,0,0.4
+Raymond Park,2011,2,0,2,0,0,1.0
+Raymond Park,2012,3,1,2,0,0,0.6667
+Raymond Park,2014,6,4,2,0,0,0.3333
+Raymond Park,2015,2,0,2,0,0,1.0
+Raymond Park,2016,2,2,0,0,0,0.0
+Near Southside,2007,1,1,0,0,0,0.0
+Near Southside,2008,2,1,1,0,0,0.5
+Near Southside,2009,2,1,1,0,0,0.5
+Near Southside,2010,3,3,0,0,0,0.0
+Near Southside,2011,1,0,1,0,0,1.0
+Near Southside,2012,3,0,3,0,0,1.0
+Near Southside,2013,3,2,1,0,0,0.3333
+Near Southside,2015,1,1,0,0,0,0.0
+Near Southside,2016,3,2,1,0,0,0.3333
+Near Southside,2017,2,2,0,0,0,0.0
+Near Southside,2019,2,1,1,0,0,0.5
+East Gate,2007,2,2,0,0,0,0.0
+East Gate,2008,3,0,3,0,0,1.0
+East Gate,2009,4,2,2,0,0,0.5
+East Gate,2010,5,0,5,0,0,1.0
+East Gate,2011,14,8,6,0,0,0.4286
+East Gate,2012,8,6,2,0,0,0.25
+East Gate,2013,4,2,2,0,0,0.5
+East Gate,2014,3,2,1,0,0,0.3333
+East Gate,2015,3,2,1,0,0,0.3333
+East Gate,2016,7,2,5,0,0,0.7143
+East Gate,2017,1,1,0,0,0,0.0
+East Gate,2018,2,0,2,0,0,1.0
+Beech Grove,2008,2,2,0,0,0,0.0
+Beech Grove,2009,1,1,0,0,0,0.0
+Beech Grove,2011,3,2,1,0,0,0.3333
+Beech Grove,2012,5,3,2,0,0,0.4
+Beech Grove,2013,4,1,3,0,0,0.75
+Beech Grove,2014,5,4,1,0,0,0.2
+Beech Grove,2015,6,4,2,0,0,0.3333
+Beech Grove,2016,1,0,1,0,0,1.0
+Nora / Far Northside,2006,3,0,2,1,0,1.0
+Nora / Far Northside,2008,13,4,6,2,1,0.6923
+Nora / Far Northside,2009,7,3,4,0,0,0.5714
+Nora / Far Northside,2010,9,4,5,0,0,0.5556
+Nora / Far Northside,2011,6,2,4,0,0,0.6667
+Nora / Far Northside,2012,2,1,1,0,0,0.5
+Nora / Far Northside,2013,8,1,5,2,0,0.875
+Nora / Far Northside,2014,5,1,4,0,0,0.8
+Nora / Far Northside,2015,8,2,5,1,0,0.75
+Nora / Far Northside,2018,3,1,2,0,0,0.6667
+Nora / Far Northside,2019,1,0,1,0,0,1.0
+North Central,2006,2,1,1,0,0,0.5
+North Central,2007,1,0,1,0,0,1.0
+North Central,2008,1,0,1,0,0,1.0
+North Central,2009,1,1,0,0,0,0.0
+North Central,2010,3,1,2,0,0,0.6667
+North Central,2011,3,2,0,1,0,0.3333
+North Central,2012,2,1,1,0,0,0.5
+North Central,2013,1,1,0,0,0,0.0
+North Central,2014,3,0,1,2,0,1.0
+North Central,2015,4,0,4,0,0,1.0
+North Central,2016,1,0,1,0,0,1.0
+North Central,2017,5,0,3,2,0,1.0
+North Central,2018,2,1,1,0,0,0.5
+North Central,2019,2,0,2,0,0,1.0
+North Central,2021,1,0,1,0,0,1.0
+Crooked Creek,2009,1,1,0,0,0,0.0
+Crooked Creek,2010,2,2,0,0,0,0.0
+Crooked Creek,2011,3,2,1,0,0,0.3333
+Crooked Creek,2012,2,2,0,0,0,0.0
+Crooked Creek,2013,5,3,2,0,0,0.4
+Crooked Creek,2014,6,4,2,0,0,0.3333
+Crooked Creek,2016,2,2,0,0,0,0.0
+Southdale,2008,2,0,2,0,0,1.0
+Southdale,2009,1,0,0,1,0,1.0
+Southdale,2010,1,1,0,0,0,0.0
+Southdale,2011,1,0,1,0,0,1.0
+Southdale,2012,5,1,4,0,0,0.8
+Southdale,2013,4,2,2,0,0,0.5
+Southdale,2014,3,3,0,0,0,0.0
+Southdale,2015,4,2,2,0,0,0.5
+Southdale,2018,1,0,1,0,0,1.0
+I-69/Fall Creek,2007,1,0,0,1,0,1.0
+I-69/Fall Creek,2008,6,3,2,1,0,0.5
+I-69/Fall Creek,2009,3,2,1,0,0,0.3333
+I-69/Fall Creek,2010,4,1,3,0,0,0.75
+I-69/Fall Creek,2011,6,1,5,0,0,0.8333
+I-69/Fall Creek,2012,4,2,2,0,0,0.5
+I-69/Fall Creek,2013,7,2,5,0,0,0.7143
+I-69/Fall Creek,2014,6,4,2,0,0,0.3333
+I-69/Fall Creek,2015,6,1,5,0,0,0.8333
+I-69/Fall Creek,2016,2,2,0,0,0,0.0
+I-69/Fall Creek,2017,1,0,1,0,0,1.0
+I-69/Fall Creek,2018,1,1,0,0,0,0.0
+Garden City,2007,1,0,1,0,0,1.0
+Garden City,2008,3,0,3,0,0,1.0
+Garden City,2009,4,4,0,0,0,0.0
+Garden City,2010,3,1,2,0,0,0.6667
+Garden City,2011,5,2,3,0,0,0.6
+Garden City,2012,2,0,2,0,0,1.0
+Garden City,2013,6,4,2,0,0,0.3333
+Garden City,2014,4,3,1,0,0,0.25
+Garden City,2015,6,2,4,0,0,0.6667
+Garden City,2016,3,2,1,0,0,0.3333
+Garden City,2017,2,1,1,0,0,0.5
+Eagledale,2007,1,0,1,0,0,1.0
+Eagledale,2008,7,2,5,0,0,0.7143
+Eagledale,2009,5,4,1,0,0,0.2
+Eagledale,2010,6,2,4,0,0,0.6667
+Eagledale,2011,7,6,0,1,0,0.1429
+Eagledale,2012,3,1,1,1,0,0.6667
+Eagledale,2013,7,5,2,0,0,0.2857
+Eagledale,2014,1,1,0,0,0,0.0
+Eagledale,2015,4,3,1,0,0,0.25
+Eagledale,2016,4,2,1,1,0,0.5
+Eagledale,2017,3,2,1,0,0,0.3333
+Eagledale,2019,2,1,1,0,0,0.5
+Eagledale,2020,1,0,1,0,0,1.0
+Eagledale,2021,1,0,1,0,0,1.0
+Near Westside,2007,2,2,0,0,0,0.0
+Near Westside,2008,6,4,2,0,0,0.3333
+Near Westside,2009,2,1,1,0,0,0.5
+Near Westside,2010,2,1,1,0,0,0.5
+Near Westside,2011,5,2,3,0,0,0.6
+Near Westside,2012,6,5,1,0,0,0.1667
+Near Westside,2013,4,1,3,0,0,0.75
+Near Westside,2014,2,2,0,0,0,0.0
+Near Westside,2015,4,4,0,0,0,0.0
+Near Westside,2016,2,2,0,0,0,0.0
+Park 100,2005,1,1,0,0,0,0.0
+Park 100,2008,6,3,3,0,0,0.5
+Park 100,2009,7,3,4,0,0,0.5714
+Park 100,2010,11,1,9,0,1,0.9091
+Park 100,2011,14,7,6,1,0,0.5
+Park 100,2012,7,4,3,0,0,0.4286
+Park 100,2013,8,3,5,0,0,0.625
+Park 100,2014,7,4,3,0,0,0.4286
+Park 100,2015,5,1,2,2,0,0.8
+Park 100,2016,3,1,2,0,0,0.6667
+Park 100,2017,1,0,1,0,0,1.0
+Park 100,2018,1,0,1,0,0,1.0
+Park 100,2020,1,0,1,0,0,1.0
+Edgewood,2008,3,0,3,0,0,1.0
+Edgewood,2009,1,0,1,0,0,1.0
+Edgewood,2010,1,1,0,0,0,0.0
+Edgewood,2011,5,4,1,0,0,0.2
+Edgewood,2012,4,3,1,0,0,0.25
+Edgewood,2013,6,3,3,0,0,0.5
+Edgewood,2014,5,4,1,0,0,0.2
+Edgewood,2015,2,1,1,0,0,0.5
+Edgewood,2016,2,1,1,0,0,0.5
+Lawrence-Fort Ben-Oaklandon,2008,2,2,0,0,0,0.0
+Lawrence-Fort Ben-Oaklandon,2009,3,2,1,0,0,0.3333
+Lawrence-Fort Ben-Oaklandon,2010,9,3,4,2,0,0.6667
+Lawrence-Fort Ben-Oaklandon,2011,6,1,5,0,0,0.8333
+Lawrence-Fort Ben-Oaklandon,2012,3,2,1,0,0,0.3333
+Lawrence-Fort Ben-Oaklandon,2013,12,4,8,0,0,0.6667
+Lawrence-Fort Ben-Oaklandon,2014,2,1,0,1,0,0.5
+Lawrence-Fort Ben-Oaklandon,2015,9,2,7,0,0,0.7778
+Lawrence-Fort Ben-Oaklandon,2016,5,3,1,1,0,0.4
+Lawrence-Fort Ben-Oaklandon,2017,4,1,3,0,0,0.75
+Lawrence-Fort Ben-Oaklandon,2019,1,0,1,0,0,1.0
+Park Fletcher,2007,2,0,2,0,0,1.0
+Park Fletcher,2008,1,1,0,0,0,0.0
+Park Fletcher,2009,5,2,2,1,0,0.6
+Park Fletcher,2010,4,0,4,0,0,1.0
+Park Fletcher,2011,2,0,2,0,0,1.0
+Park Fletcher,2012,3,2,1,0,0,0.3333
+Park Fletcher,2013,3,1,2,0,0,0.6667
+Park Fletcher,2014,2,1,1,0,0,0.5
+Park Fletcher,2016,2,2,0,0,0,0.0
+Garfield Park,2008,3,3,0,0,0,0.0
+Garfield Park,2010,1,0,1,0,0,1.0
+Garfield Park,2011,4,4,0,0,0,0.0
+Garfield Park,2012,3,2,1,0,0,0.3333
+Garfield Park,2013,3,3,0,0,0,0.0
+Garfield Park,2014,6,4,2,0,0,0.3333
+Garfield Park,2015,1,0,1,0,0,1.0
+Garfield Park,2016,3,2,1,0,0,0.3333
+Garfield Park,2017,1,0,1,0,0,1.0
+Garfield Park,2018,2,1,1,0,0,0.5
+Garfield Park,2019,1,1,0,0,0,0.0
+Arlington Woods,2007,1,0,1,0,0,1.0
+Arlington Woods,2008,1,1,0,0,0,0.0
+Arlington Woods,2010,6,4,2,0,0,0.3333
+Arlington Woods,2011,5,2,3,0,0,0.6
+Arlington Woods,2012,1,1,0,0,0,0.0
+Arlington Woods,2013,4,2,2,0,0,0.5
+Arlington Woods,2014,3,1,2,0,0,0.6667
+Arlington Woods,2015,2,1,1,0,0,0.5
+Arlington Woods,2016,2,2,0,0,0,0.0
+Arlington Woods,2017,4,1,3,0,0,0.75
+Butler-Tarkington/Rocky Ripple,2006,1,1,0,0,0,0.0
+Butler-Tarkington/Rocky Ripple,2007,1,1,0,0,0,0.0
+Butler-Tarkington/Rocky Ripple,2008,8,0,6,2,0,1.0
+Butler-Tarkington/Rocky Ripple,2009,1,0,1,0,0,1.0
+Butler-Tarkington/Rocky Ripple,2010,7,1,5,1,0,0.8571
+Butler-Tarkington/Rocky Ripple,2011,1,1,0,0,0,0.0
+Butler-Tarkington/Rocky Ripple,2013,2,0,2,0,0,1.0
+Butler-Tarkington/Rocky Ripple,2014,3,1,1,1,0,0.6667
+Butler-Tarkington/Rocky Ripple,2015,3,1,2,0,0,0.6667
+Butler-Tarkington/Rocky Ripple,2016,2,0,2,0,0,1.0
+Butler-Tarkington/Rocky Ripple,2017,2,0,2,0,0,1.0
+Butler-Tarkington/Rocky Ripple,2018,2,1,1,0,0,0.5
+Butler-Tarkington/Rocky Ripple,2019,1,0,1,0,0,1.0
+Fairgrounds,2006,1,0,1,0,0,1.0
+Fairgrounds,2008,1,1,0,0,0,0.0
+Fairgrounds,2009,1,1,0,0,0,0.0
+Fairgrounds,2011,2,1,1,0,0,0.5
+Fairgrounds,2012,7,3,4,0,0,0.5714
+Fairgrounds,2013,1,1,0,0,0,0.0
+Fairgrounds,2015,1,0,1,0,0,1.0
+Fairgrounds,2016,5,2,3,0,0,0.6
+Fairgrounds,2017,1,1,0,0,0,0.0
+Fairgrounds,2019,1,0,1,0,0,1.0
+Fairgrounds,2020,1,1,0,0,0,0.0
+Southeast Warren,2008,1,1,0,0,0,0.0
+Southeast Warren,2009,2,2,0,0,0,0.0
+Southeast Warren,2010,3,1,1,1,0,0.6667
+Southeast Warren,2011,8,4,4,0,0,0.5
+Southeast Warren,2012,9,6,0,2,1,0.3333
+Southeast Warren,2013,6,2,4,0,0,0.6667
+Southeast Warren,2014,6,4,2,0,0,0.3333
+Southeast Warren,2015,3,3,0,0,0,0.0
+Southeast Warren,2016,3,1,2,0,0,0.6667
+Southeast Warren,2018,1,1,0,0,0,0.0
+Eagle Creek,2007,1,0,1,0,0,1.0
+Eagle Creek,2008,2,1,1,0,0,0.5
+Eagle Creek,2009,1,0,1,0,0,1.0
+Eagle Creek,2010,4,2,2,0,0,0.5
+Eagle Creek,2011,2,1,1,0,0,0.5
+Eagle Creek,2012,3,2,1,0,0,0.3333
+Eagle Creek,2013,3,1,2,0,0,0.6667
+Eagle Creek,2014,1,1,0,0,0,0.0
+Eagle Creek,2015,1,0,0,1,0,1.0
+Eagle Creek,2018,1,1,0,0,0,0.0
+Eagle Creek,2019,1,1,0,0,0,0.0
+South Franklin,2007,1,1,0,0,0,0.0
+South Franklin,2008,1,1,0,0,0,0.0
+South Franklin,2010,3,2,1,0,0,0.3333
+South Franklin,2011,1,0,1,0,0,1.0
+South Franklin,2012,7,2,5,0,0,0.7143
+South Franklin,2013,3,2,1,0,0,0.3333
+South Franklin,2014,2,2,0,0,0,0.0
+South Franklin,2015,1,0,1,0,0,1.0
+South Franklin,2016,2,1,1,0,0,0.5
+South Franklin,2017,1,0,1,0,0,1.0
+South Franklin,2018,1,1,0,0,0,0.0
+Meridian Kessler,2006,3,1,2,0,0,0.6667
+Meridian Kessler,2007,4,2,2,0,0,0.5
+Meridian Kessler,2008,12,3,8,1,0,0.75
+Meridian Kessler,2009,4,3,1,0,0,0.25
+Meridian Kessler,2010,6,1,4,1,0,0.8333
+Meridian Kessler,2011,8,2,5,1,0,0.75
+Meridian Kessler,2012,7,3,3,1,0,0.5714
+Meridian Kessler,2013,11,3,6,2,0,0.7273
+Meridian Kessler,2014,4,0,4,0,0,1.0
+Meridian Kessler,2015,1,0,1,0,0,1.0
+Meridian Kessler,2016,3,1,2,0,0,0.6667
+Meridian Kessler,2017,5,0,4,1,0,1.0
+Meridian Kessler,2018,3,0,3,0,0,1.0
+Meridian Kessler,2019,2,0,2,0,0,1.0
+Meridian Kessler,2020,2,0,2,0,0,1.0
