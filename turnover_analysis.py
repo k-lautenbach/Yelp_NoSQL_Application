@@ -125,6 +125,16 @@ for neighborhood, stats in neighborhood_stats.items():
 
 results.sort(key=lambda x: x["turnover_rate"], reverse=True)
 
+# ── Global average turnover rate across all Indianapolis ──
+total_all   = sum(r["total_businesses"] for r in results)
+closed_all  = sum(r["closed"] for r in results)
+new_all     = sum(r["new"] for r in results)
+global_turnover     = round(closed_all / total_all, 4) if total_all else 0
+global_new_rate     = round(new_all / total_all, 4) if total_all else 0
+
+print(f"\nGlobal Indianapolis Turnover Rate: {global_turnover:.1%}")
+print(f"Global Indianapolis New Business Rate: {global_new_rate:.1%}")
+
 # ── Step 5: Print top 10 neighborhoods ────────────────────
 
 print("Top 10 neighborhoods by turnover rate:")
@@ -181,6 +191,19 @@ for i, count in enumerate(counts):
     ax.text(i, max(turnover_rates[i], new_business_rates[i]) + 4,
             f"n={count}", ha="center", va="bottom", fontsize=8, color="gray")
 
+# Add global average lines
+ax.axhline(y=global_turnover * 100, color="steelblue", linestyle="--",
+           linewidth=1.5, alpha=0.7)
+ax.text(len(names) - 0.5, global_turnover * 100 + 0.5,
+        f"Indy avg: {global_turnover:.1%}",
+        ha="right", va="bottom", fontsize=9, color="black",
+        bbox=dict(boxstyle="round,pad=0.2", facecolor="white", edgecolor="none", alpha=0.8))
+ax.axhline(y=global_new_rate * 100, color="darkorange", linestyle="--",
+           linewidth=1.5, alpha=0.7)
+ax.text(len(names) - 0.5, global_new_rate * 100 + 0.5,
+        f"Indy avg: {global_new_rate:.1%}",
+        ha="right", va="bottom", fontsize=9, color="black",
+        bbox=dict(boxstyle="round,pad=0.2", facecolor="white", edgecolor="none", alpha=0.8))
 ax.set_xticks(list(x))
 ax.set_xticklabels(names, rotation=45, ha="right", fontsize=9)
 ax.set_ylabel("Rate (%)", fontsize=12)
