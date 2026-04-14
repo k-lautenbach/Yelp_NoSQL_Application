@@ -14,6 +14,7 @@ import os
 import csv
 from collections import defaultdict
 import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
 import pandas as pd
 from pymongo import MongoClient
 
@@ -173,7 +174,7 @@ colors = plt.cm.tab10.colors
 
 for i, neighborhood in enumerate(FOCUS_NEIGHBORHOODS):
     neighborhood_data = sorted(
-        [r for r in results if r["neighborhood"] == neighborhood and r["total"] >= MIN_PER_YEAR],
+        [r for r in results if r["neighborhood"] == neighborhood],  # remove MIN_PER_YEAR filter
         key=lambda x: x["year"]
     )
     if not neighborhood_data:
@@ -183,9 +184,19 @@ for i, neighborhood in enumerate(FOCUS_NEIGHBORHOODS):
     df = pd.DataFrame(neighborhood_data)
     df["smoothed"] = df["upscale_ratio"].rolling(3, min_periods=1).mean()
 
-    ax.plot(df["year"], df["smoothed"] * 100,
+    # Split into reliable and sparse segments
+    reliable = df[df["total"] >= MIN_PER_YEAR]
+    sparse   = df[df["total"] < MIN_PER_YEAR]
+
+    # Solid line for reliable years
+    ax.plot(reliable["year"], reliable["smoothed"] * 100,
             marker="o", linewidth=2,
             label=neighborhood,
+            color=colors[i % len(colors)])
+
+    # Dashed lighter line for sparse years
+    ax.plot(sparse["year"], sparse["smoothed"] * 100,
+            marker="o", linewidth=1, linestyle="--", alpha=0.4,
             color=colors[i % len(colors)])
 
 # Global Indianapolis average line
@@ -196,10 +207,21 @@ ax.plot(df_global.index, df_global["smoothed"] * 100,
 ax.axvline(x=2015, color="gray", linestyle="--", linewidth=1, alpha=0.7)
 ax.text(2015.1, 95, "2015", color="gray", fontsize=9)
 
+
+
 ax.set_xlabel("Year (first review = business entry)", fontsize=12)
 ax.set_ylabel("Upscale Business Ratio (price tier 2+ as % of new businesses)", fontsize=11)
 ax.set_title("Price Tier Creep Over Time by Indianapolis Neighborhood (3-Year Rolling Avg)", fontsize=13)
-ax.legend(loc="upper left")
+
+# Add reliability for data
+legend_elements = [
+    Line2D([0], [0], color="gray", linewidth=2, linestyle="-",  label="Reliable (n ≥ 5)"),
+    Line2D([0], [0], color="gray", linewidth=1, linestyle="--", alpha=0.4, label="Sparse (n < 5)"),
+]
+# Combine with existing handles
+handles, labels = ax.get_legend_handles_labels()
+ax.legend(handles=handles + legend_elements, loc="lower left")
+
 ax.set_xlim(2005, 2021)
 ax.set_ylim(0, 100)
 ax.grid(axis="y", alpha=0.3)
@@ -209,44 +231,6 @@ chart_path = os.path.join(RESULTS_DIR, "price_tier_over_time.png")
 plt.savefig(chart_path, dpi=150)
 plt.close()
 print(f"Line chart saved to {chart_path}")
-
-# ── Step 7: Heatmap — overall upscale ratio per neighborhood
-
-print("Generating heatmap...")
-
-summary = defaultdict(lambda: {"total": 0, "upscale": 0})
-for r in results:
-    summary[r["neighborhood"]]["total"]   += r["total"]
-    summary[r["neighborhood"]]["upscale"] += r["tier_2"] + r["tier_3"] + r["tier_4"]
-
-summary_list = [
-    {"neighborhood": n, "upscale_ratio": v["upscale"] / v["total"]}
-    for n, v in summary.items() if v["total"] >= MIN_BUSINESSES
-]
-summary_list.sort(key=lambda x: x["upscale_ratio"], reverse=True)
-top20 = summary_list[:20]
-
-names  = [r["neighborhood"] for r in top20]
-ratios = [r["upscale_ratio"] * 100 for r in top20]
-
-fig, ax = plt.subplots(figsize=(10, 8))
-bars = ax.barh(names[::-1], ratios[::-1],
-               color=plt.cm.RdYlGn([r / 100 for r in ratios[::-1]]))
-
-for bar, ratio in zip(bars, ratios[::-1]):
-    ax.text(bar.get_width() + 0.5, bar.get_y() + bar.get_height() / 2,
-            f"{ratio:.1f}%", va="center", fontsize=9)
-
-ax.set_xlabel("Upscale Business Ratio (% of price tier 2 or higher)", fontsize=12)
-ax.set_title("Indianapolis Neighborhoods Ranked by Upscale Business Ratio", fontsize=13)
-ax.set_xlim(0, 105)
-ax.grid(axis="x", alpha=0.3)
-plt.tight_layout()
-
-heatmap_path = os.path.join(RESULTS_DIR, "price_tier_heatmap.png")
-plt.savefig(heatmap_path, dpi=150)
-plt.close()
-print(f"Heatmap saved to {heatmap_path}")
 
 client.close()
 print("\nDone.")
