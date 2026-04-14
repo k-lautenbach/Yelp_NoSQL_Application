@@ -32,7 +32,17 @@ client.admin.command("ping")
 print(f"Connected to MongoDB at {MONGO_URI}\n")
 
 db = client[DB_NAME]
-
+FOCUS_NEIGHBORHOODS = [
+    "Butler-Tarkington/Rocky Ripple",
+    "Fairgrounds",
+    "Fountain Square",
+    "Meridian Hills/Williams Creek",
+    "Augusta / New Augusta",
+    "Downtown",
+    "Near Eastside",
+    "Broad Ripple",
+    "Near NW - Riverside"
+]
 # ── Step 1: Aggregate first/last review date per business ──
 
 print("Aggregating first/last review dates per business...")
@@ -61,10 +71,11 @@ print(f"  Found review history for {len(review_map):,} businesses.\n")
 print("Fetching business metadata...")
 
 businesses = db.businesses.find(
-    {"neighborhood": {"$exists": True}},
+    {
+        "neighborhood": {"$exists": True, "$in": FOCUS_NEIGHBORHOODS}
+    },
     {"business_id": 1, "neighborhood": 1, "categories": 1, "is_open": 1}
 )
-
 # ── Step 3: Classify each business ────────────────────────
 
 closed_threshold = DATASET_CUTOFF - relativedelta(months=CLOSED_MONTHS)

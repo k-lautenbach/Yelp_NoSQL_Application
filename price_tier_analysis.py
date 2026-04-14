@@ -23,12 +23,14 @@ RESULTS_DIR     = "results"
 MIN_BUSINESSES  = 20
 MIN_PER_YEAR    = 5
 FOCUS_NEIGHBORHOODS = [
+    "Butler-Tarkington/Rocky Ripple",
+    "Fairgrounds",
     "Fountain Square",
-    "Broad Ripple",
-    "Near Eastside",
+    "Augusta / New Augusta",
     "Downtown",
-    "South Perry",
-    "Castleton"
+    "Near Eastside",
+    "Broad Ripple",
+    "Near NW - Riverside"
 ]
 
 os.makedirs(RESULTS_DIR, exist_ok=True)
