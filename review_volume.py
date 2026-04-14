@@ -1,50 +1,22 @@
-"""
-review_volume.py
-----------------
-Analyzes review volume over time for one or more Indianapolis neighborhoods
+
+'''
+Authors: Kate Lautenbach, Andrew Nee, Abigail Valladolid
+
+this file analyzes review volume over time for one or more Indianapolis neighborhoods
 or zip codes, producing a line graph with one series per area.
 
-Database : yelp_indy  (mongodb://localhost:27017/)
-Output   : results/review_volume.png
-           results/review_volume.csv
+'''
 
-Usage examples
---------------
-# By neighborhood (unlimited args, or omit for "all"):
-  python review_volume.py --by neighborhood "Broad Ripple" "Downtown" "Fountain Square"
-  python review_volume.py --by neighborhood
-
-# By zip code:
-  python review_volume.py --by zipcode 46202 46205
-  python review_volume.py --by zipcode
-
-# With dataset-wide average overlay:
-  python review_volume.py --by neighborhood "Broad Ripple" "Downtown" --show-avg
-"""
-
-import argparse
-import os
-import csv
-from collections import defaultdict
-
-import matplotlib.pyplot as plt
-from pymongo import MongoClient
-
-from price_tier_analysis import neighborhood
-
-# ── Config ─────────────────────────────────────────────────────────────────────
-
+# Connect to Mongo
 MONGO_URI   = "mongodb://localhost:27017/"
 DB_NAME     = "yelp_indy"
 RESULTS_DIR = "results"
 
 os.makedirs(RESULTS_DIR, exist_ok=True)
 
-# Type alias
 
 VolumeData = dict[str, dict[int, int]]
 
-#  CLI
 
 def parse_args():
     parser = argparse.ArgumentParser(
@@ -73,7 +45,6 @@ def parse_args():
     return parser.parse_args()
 
 # Helpers
-
 def mongo_field(by: str) -> str:
     """Map CLI 'by' value to the MongoDB businesses field name."""
     return "neighborhood" if by == "neighborhood" else "postal_code"
@@ -82,7 +53,7 @@ def mongo_field(by: str) -> str:
 def year_count():
     return defaultdict(int)
 
-#Core analysis
+# Core analysis
 
 def fetch_biz_to_area(db, by: str) -> dict[str, str]:
     """Returns a full business_id → area mapping from the businesses collection."""
@@ -97,7 +68,6 @@ def fetch_biz_to_area(db, by: str) -> dict[str, str]:
         if area:
             result[biz["business_id"]] = area
     return result
-
 
 def aggregate_reviews(db, biz_to_area: dict[str, str]) -> VolumeData:
     """Aggregate review counts by area and year for the given business→area map."""
@@ -264,7 +234,7 @@ def plot_volume(
     plt.close()
     print(f"  Chart saved → {chart_path}")
 
-#Main
+# Main
 
 def main():
     neighborhoods = ['Near Westside', "I-69/Fall Creek", 'Near Eastside',
@@ -294,8 +264,6 @@ def main():
     print("global_avg:", global_avg)
 
     client.close()
-
-
 
 
 if __name__ == "__main__":

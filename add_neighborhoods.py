@@ -1,18 +1,19 @@
-from pymongo import MongoClient
-import geopandas as gpd
-from shapely.geometry import Point
-import pandas as pd
-from bson import ObjectId
+'''
+Authors: Kate Lautenbach, Andrew Nee, Abigail Valladolid
 
-# ── Connection ─────────────────────────────────────────────
+this file establishes neighborhoods using a GeoDataFrame
+
+'''
+
+# establish connection
 client = MongoClient("mongodb://localhost:27017/")
 db = client["yelp_indy"]
 
-# ── Load businesses from MongoDB ───────────────────────────
+# Load businesses from MongoDB
 print("Loading businesses...")
 businesses = list(db.businesses.find({}, {"_id": 1, "location": 1}))
 
-# ── Build GeoDataFrame ─────────────────────────────────────
+# Build GeoDataFrame
 print("Building GeoDataFrame...")
 gdf = gpd.GeoDataFrame(
     businesses,
@@ -21,15 +22,15 @@ gdf = gpd.GeoDataFrame(
     crs="EPSG:4326"
 )
 
-# ── Load neighborhood boundaries ───────────────────────────
+# Load neighborhood boundaries
 print("Loading neighborhoods...")
 neighborhoods = gpd.read_file("indy_neighborhoods.geojson")
 
-# ── Spatial join ───────────────────────────────────────────
+# Spatial join
 print("Joining...")
 joined = gpd.sjoin(gdf, neighborhoods[["NAME", "geometry"]], how="left", predicate="within")
 
-# ── Write back to MongoDB ──────────────────────────────────
+# Write back to MongoDB
 print("Updating MongoDB...")
 updated = 0
 for _, row in joined.iterrows():

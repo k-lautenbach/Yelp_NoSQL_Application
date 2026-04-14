@@ -1,21 +1,12 @@
-"""
-turnover_analysis.py
---------------------
-Analyzes business turnover rate across Indianapolis neighborhoods using
+'''
+Authors: Kate Lautenbach, Andrew Nee, Abigail Valladolid
+
+this file analyzes business turnover rate across Indianapolis neighborhoods using
 the reviews and businesses collections in MongoDB.
 
-Database : yelp_indy  (mongodb://localhost:27017/)
-Output   : results/turnover_by_neighborhood.csv
-           results/turnover_chart.png
-"""
+'''
 
-import os
-import csv
-from datetime import datetime, timezone
-import matplotlib.pyplot as plt
-from pymongo import MongoClient
-from dateutil.relativedelta import relativedelta
-
+# configs
 MONGO_URI       = "mongodb://localhost:27017/"
 DB_NAME         = "yelp_indy"
 RESULTS_DIR     = "results"
@@ -43,7 +34,7 @@ FOCUS_NEIGHBORHOODS = [
     "Broad Ripple",
     "Near NW - Riverside"
 ]
-# ── Step 1: Aggregate first/last review date per business ──
+# get first/last review date per business
 
 print("Aggregating first/last review dates per business...")
 
@@ -66,7 +57,7 @@ for doc in review_dates:
 
 print(f"  Found review history for {len(review_map):,} businesses.\n")
 
-# ── Step 2: Pull business metadata ────────────────────────
+# pull business metadata
 
 print("Fetching business metadata...")
 
@@ -76,7 +67,7 @@ businesses = db.businesses.find(
     },
     {"business_id": 1, "neighborhood": 1, "categories": 1, "is_open": 1}
 )
-# ── Step 3: Classify each business ────────────────────────
+# classify each business
 
 closed_threshold = DATASET_CUTOFF - relativedelta(months=CLOSED_MONTHS)
 
@@ -114,7 +105,7 @@ for biz in businesses:
 
 print(f"  Processed businesses across {len(neighborhood_stats):,} neighborhoods.\n")
 
-# ── Step 4: Calculate rates ────────────────────────────────
+# calculate rates
 
 results = []
 for neighborhood, stats in neighborhood_stats.items():
@@ -136,7 +127,7 @@ for neighborhood, stats in neighborhood_stats.items():
 
 results.sort(key=lambda x: x["turnover_rate"], reverse=True)
 
-# ── Global average turnover rate across all Indianapolis ──
+# global average turnover rate across all Indianapolis
 total_all   = sum(r["total_businesses"] for r in results)
 closed_all  = sum(r["closed"] for r in results)
 new_all     = sum(r["new"] for r in results)
@@ -146,7 +137,7 @@ global_new_rate     = round(new_all / total_all, 4) if total_all else 0
 print(f"\nGlobal Indianapolis Turnover Rate: {global_turnover:.1%}")
 print(f"Global Indianapolis New Business Rate: {global_new_rate:.1%}")
 
-# ── Step 5: Print top 10 neighborhoods ────────────────────
+# print top 10 neighborhoods
 
 print("Top 10 neighborhoods by turnover rate:")
 print(f"{'Neighborhood':30}  {'Total':>6}  {'Closed':>7}  {'New':>5}  {'Turnover':>9}  {'New Rate':>9}")
@@ -161,7 +152,7 @@ for row in results[:10]:
         f"{row['new_business_rate']:>8.1%}"
     )
 
-# ── Step 6: Export CSV ─────────────────────────────────────
+# export CSV
 
 csv_path = os.path.join(RESULTS_DIR, "turnover_by_neighborhood.csv")
 fieldnames = ["neighborhood", "total_businesses", "closed", "new",
@@ -174,7 +165,7 @@ with open(csv_path, "w", newline="", encoding="utf-8") as f:
 
 print(f"\nFull results exported to {csv_path}")
 
-# ── Step 7: Bar chart — ordered by count, top N ───────────
+# bar chart, ordered by count, top n
 
 top_by_count = sorted(results, key=lambda x: x["total_businesses"], reverse=True)[:TOP_N]
 
@@ -185,9 +176,7 @@ counts             = [r["total_businesses"] for r in top_by_count]
 
 x     = range(len(names))
 width = 0.4
-
 fig, ax = plt.subplots(figsize=(16, 7))
-
 bars1 = ax.bar([i - width/2 for i in x], turnover_rates,     width, label="Turnover Rate",     color="steelblue")
 bars2 = ax.bar([i + width/2 for i in x], new_business_rates, width, label="New Business Rate", color="darkorange")
 
@@ -202,7 +191,7 @@ for i, count in enumerate(counts):
     ax.text(i, max(turnover_rates[i], new_business_rates[i]) + 4,
             f"n={count}", ha="center", va="bottom", fontsize=8, color="gray")
 
-# Add global average lines
+# Add global average lines!!!!
 ax.axhline(y=global_turnover * 100, color="steelblue", linestyle="--",
            linewidth=1.5, alpha=0.7)
 ax.text(len(names) - 0.5, global_turnover * 100 + 0.5,

@@ -1,14 +1,11 @@
-"""
-price_tier_analysis.py
-----------------------
-Tracks price tier composition per neighborhood over time using
+
+'''
+Authors: Kate Lautenbach, Andrew Nee, Abigail Valladolid
+
+this file tracks price tier composition per neighborhood over time using
 first review year as a business "entry" timestamp.
 
-Database : yelp_indy  (mongodb://localhost:27017/)
-Output   : results/price_tier_by_neighborhood.csv
-           results/price_tier_over_time.png
-           results/price_tier_heatmap.png
-"""
+'''
 
 import os
 import csv
@@ -42,7 +39,7 @@ print(f"Connected to MongoDB at {MONGO_URI}\n")
 
 db = client[DB_NAME]
 
-# ── Step 1: Get first review year per business ─────────────
+# first review year per business
 
 print("Aggregating first review year per business...")
 
@@ -69,7 +66,7 @@ for doc in first_reviews:
 
 print(f"  Found first review year for {len(first_year_map):,} businesses.\n")
 
-# ── Step 2: Pull businesses with price + neighborhood ──────
+# pull businesses with price & neighborhood
 
 print("Fetching businesses...")
 
@@ -81,7 +78,7 @@ businesses = db.businesses.find(
     {"business_id": 1, "neighborhood": 1, "attributes.RestaurantsPriceRange2": 1}
 )
 
-# ── Step 3: Build neighborhood → year → price tier counts ──
+# build neighborhood → year → price tier counts
 
 stats = defaultdict(lambda: defaultdict(lambda: defaultdict(int)))
 
@@ -110,7 +107,7 @@ for biz in businesses:
 
 print(f"  Built price tier data for {len(stats):,} neighborhoods. ({skipped} records skipped)\n")
 
-# ── Step 4: Calculate upscale ratio per neighborhood/year ──
+# calculate upscale ratio per neighborhood/year
 
 results = []
 for neighborhood, year_data in stats.items():
@@ -132,7 +129,7 @@ for neighborhood, year_data in stats.items():
             "upscale_ratio": round(upscale / total, 4) if total else 0,
         })
 
-# ── Global average upscale ratio across all Indianapolis ───
+# global average upscale ratio across all Indianapolis
 
 print("Computing global Indianapolis price tier average...")
 
@@ -153,7 +150,7 @@ global_ratios = [
 df_global = pd.DataFrame({"year": global_years, "ratio": global_ratios}).set_index("year")
 df_global["smoothed"] = df_global["ratio"].rolling(3, min_periods=1).mean()
 
-# ── Step 5: Export CSV ─────────────────────────────────────
+# Export CSV
 
 csv_path = os.path.join(RESULTS_DIR, "price_tier_by_neighborhood.csv")
 with open(csv_path, "w", newline="", encoding="utf-8") as f:
@@ -165,7 +162,7 @@ with open(csv_path, "w", newline="", encoding="utf-8") as f:
 
 print(f"CSV exported to {csv_path}")
 
-# ── Step 6: Smoothed line chart ────────────────────────────
+# Smoothed line chart
 
 print("Generating smoothed line chart...")
 

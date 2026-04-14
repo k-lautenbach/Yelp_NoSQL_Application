@@ -1,20 +1,11 @@
-"""
-load_mongo.py
--------------
-Ingests the filtered Indianapolis Yelp dataset into MongoDB.
 
-Database : yelp_indy  (mongodb://localhost:27017/)
-Collections created:
-  businesses  – with 2dsphere index on GeoJSON location field
-  reviews
-  checkins
-  tips
-"""
+'''
+Authors: Kate Lautenbach, Andrew Nee, Abigail Valladolid
 
-import json
-import os
-from pymongo import MongoClient, GEOSPHERE, ASCENDING
-from pymongo.errors import BulkWriteError
+this file ingests the filtered Indianapolis Yelp dataset into MongoDB.
+
+'''
+
 
 MONGO_URI  = "mongodb://localhost:27017/"
 DB_NAME    = "yelp_indy"
@@ -28,7 +19,7 @@ FILES = {
     "tips":       "yelp_academic_dataset_tip.json",
 }
 
-# ── Document transformations ───────────────────────────────────────────────────
+# Document transformations
 
 def transform_business(doc):
     """Reshape lat/lon into a GeoJSON Point for 2dsphere indexing."""
@@ -53,7 +44,7 @@ TRANSFORMS = {
     "checkins":   transform_checkin,
 }
 
-# ── Index definitions ──────────────────────────────────────────────────────────
+# Index definitions
 
 def create_indexes(db):
     db.businesses.create_index([("business_id", ASCENDING)], unique=True)
@@ -73,7 +64,7 @@ def create_indexes(db):
 
     print("Indexes created.")
 
-# ── Bulk loader ────────────────────────────────────────────────────────────────
+# Bulk loader
 
 def load_collection(collection, filepath, transform=None):
     total_inserted = 0
@@ -106,7 +97,7 @@ def load_collection(collection, filepath, transform=None):
 
     return total_inserted
 
-# ── Main ───────────────────────────────────────────────────────────────────────
+#  Main
 
 def main():
     client = MongoClient(MONGO_URI, serverSelectionTimeoutMS=5000)

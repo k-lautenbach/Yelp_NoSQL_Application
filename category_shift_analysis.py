@@ -1,22 +1,11 @@
-"""
-category_shift_analysis.py
---------------------------
-Tracks how business category composition changes over time
+'''
+Authors: Kate Lautenbach, Andrew Nee, Abigail Valladolid
+
+this file tracks how business category composition changes over time
 in key Indianapolis neighborhoods, using first review year
 as business entry timestamp.
 
-Database : yelp_indy  (mongodb://localhost:27017/)
-Output   : results/category_shift_fountain_square.png
-           results/category_shift_comparison.png
-           results/category_counts_by_year.csv
-"""
-
-import os
-import csv
-from collections import defaultdict
-import matplotlib.pyplot as plt
-import pandas as pd
-from pymongo import MongoClient
+'''
 
 MONGO_URI   = "mongodb://localhost:27017/"
 DB_NAME     = "yelp_indy"
@@ -82,7 +71,7 @@ print(f"Connected to MongoDB\n")
 
 db = client[DB_NAME]
 
-# ── Step 1: Get first review year per business ─────────────
+# First review year per business
 
 print("Getting first review years...")
 first_year_map = {}
@@ -98,7 +87,7 @@ for doc in db.reviews.aggregate([
 
 print(f"  {len(first_year_map):,} businesses with review history\n")
 
-# ── Step 2: Build year → category counts per neighborhood ──
+# build year to category counts per neighborhood
 
 def build_category_timeline(neighborhood):
     timeline = defaultdict(lambda: defaultdict(int))
@@ -117,7 +106,7 @@ def build_category_timeline(neighborhood):
             timeline[year][cat] += 1
     return timeline
 
-# ── Step 3: Aggregate into gentrify vs legacy scores ───────
+# aggregate into gentrify vs legacy scores
 
 def get_gentrify_scores(timeline):
     years    = sorted(timeline.keys())
@@ -130,7 +119,7 @@ def get_gentrify_scores(timeline):
         legacy.append(l)
     return years, gentrify, legacy
 
-# ── Step 4: Grouped category chart for Fountain Square ─────
+# grouped category chart for Fountain Square
 
 print(f"Analyzing {FOCUS_NEIGHBORHOOD}...")
 fs_timeline = build_category_timeline(FOCUS_NEIGHBORHOOD)
@@ -173,7 +162,7 @@ plt.savefig(out, dpi=150)
 plt.close()
 print(f"  Saved {out}")
 
-# ── Step 5: Gentrify vs Legacy comparison — 2x2 grid ───────
+# gentrify vs Legacy comparison (2x2 grid)
 
 print("Building gentrification score comparison...")
 
@@ -218,7 +207,7 @@ plt.savefig(out2, dpi=150, bbox_inches="tight")
 plt.close()
 print(f"  Saved {out2}")
 
-# ── Step 6: Export raw CSV ─────────────────────────────────
+# export csv
 
 rows = []
 for neighborhood in all_neighborhoods:
