@@ -52,7 +52,7 @@ GENTRIFY_CATS = [
     "Performing Arts", "Festivals", "Art Classes", "Art Schools",
     "Yoga", "Gyms", "Fitness & Instruction", "Pilates", "Barre Classes",
     "Trainers", "Boot Camps", "Cycling Classes", "Interval Training Gyms",
-    "Float Spa", "Meditation Centers", "Vintage & Consignment", "Antiques",
+    "Float Spa", "Meditation Centers", "Vintage & Consignment",
     "Books", "Bookstores", "Vinyl Records", "Shared Office Spaces",
     "Coffee Roasteries", "Day Spas", "Medical Spas", "Skin Care",
 ]
@@ -63,7 +63,7 @@ LEGACY_CATS = [
     "Diners", "Buffets", "Food Stands", "Comfort Food", "Sandwiches",
     "Laundry Services", "Laundromat", "Dry Cleaning & Laundry", "Dry Cleaning",
     "Convenience Stores", "Discount Store", "Thrift Stores", "Pawn Shops",
-    "Drugstores", "Nail Salons", "Barbers",
+    "Drugstores", "Nail Salons", "Barbers", "Antiques",
     "Auto Repair", "Tires", "Oil Change Stations", "Auto Parts & Supplies",
     "Body Shops", "Transmission Repair",
     "Soul Food", "Southern", "Barbeque", "Mexican", "Latin American",
@@ -72,7 +72,7 @@ LEGACY_CATS = [
 ]
 
 FOCUS_NEIGHBORHOOD      = "Fountain Square"
-COMPARISON_NEIGHBORHOODS = ["Broad Ripple", "Near Eastside", "Downtown"]
+COMPARISON_NEIGHBORHOODS = ["Fairgrounds", "Near Eastside", "Near NW - Riverside"]
 
 os.makedirs(RESULTS_DIR, exist_ok=True)
 
